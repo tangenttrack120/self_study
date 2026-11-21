@@ -25,3 +25,19 @@ decrease -= 1
 multiply = 1
 multiply = multiply * 5
 multiply *= 5
+
+x = 1 + 2 * 3
+y = (1 + 2) * 3
+z = 1 + (2 * 3)
+a = (2 * 3) * 4 + 2
+b = ((2 * 3) * 4) + 2
+c = (2 * 3) * (4 + 2)
+
+greetings = "Hello"
+separator = ", "
+addresse = "World"
+punc = "!"
+whole_greeting = greetings + separator + addresse + punc
+print(whole_greeting)
+whole_greeting = greetings + ", " + addresse + "!"
+print(whole_greeting)
