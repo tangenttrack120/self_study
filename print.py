@@ -41,3 +41,25 @@ whole_greeting = greetings + separator + addresse + punc
 print(whole_greeting)
 whole_greeting = greetings + ", " + addresse + "!"
 print(whole_greeting)
+
+# print(greetings + 4) -> error (can't concatenate str and int)
+if addresse == "World":
+    print("Hello, World!")
+    
+if 2 + 2 == 4:
+    print("math works")
+    
+if greetings != "Hello":
+    print("greetings is not Hello")
+    
+if 2 + 2 < 5:
+    print("math works")
+    
+if 2 + 2 > 5:
+    print("math don't work")
+    
+if 2 + 3 <= 5:
+    print("math works, I guess")
+    
+if 2 + 3 >= 5:
+    print("math works, I guess")
