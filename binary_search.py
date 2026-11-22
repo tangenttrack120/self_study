@@ -2,19 +2,41 @@ def binary_search(values, item):
     low = 0
     high = len(values) - 1
     
+    # binary search algorithm (log2(n))
     while low <= high:
-        mid = low + (high - low) // 2
+        mid = (low + high) // 2
         guess = values[mid]
         
         print(f"before low: {low}, high: {high}, mid: {mid}, guess: {guess}")
         if guess == item:
+            print(f"found item: {item} at index: {mid}")
             return mid
         if guess > item:
             high = mid - 1
+            print(f"guess: {guess} is greater than item: {item}, setting high to mid - 1: {high}")
         else:
             low = mid + 1
+            print(f"guess: {guess} is less than item: {item}, setting low to mid + 1: {low}")
         print(f"after low: {low}, high: {high}, mid: {mid}, guess: {guess}")
     return None
+
+def simple_search(values, item):
+    low = 0
+    high = len(values) - 1
+    
+    # simple linear search algorithm (O(n))
+    while low <= high:
+        head = low
+        guess = values[head]
+            
+        print(f"before low: {low}, high: {high}, head: {head}, guess: {guess}")
+        if guess == item:
+                return head
+        else:
+            head += 1
+        print(f"after low: {low}, high: {high}, head: {head}, guess: {guess}")
+    return None
+    
 
 my_list = [1, 3, 5, 7, 9]
 
