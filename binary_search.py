@@ -1,8 +1,11 @@
+# common logarithm use base 10
+# in this example we will use binary logarithm (base 2) for analyzing algorithms
+
 def binary_search(values, item):
     low = 0
     high = len(values) - 1
     
-    # binary search algorithm (log2(n))
+    # binary search algorithm (log2(n) or O(log n))
     while low <= high:
         mid = (low + high) // 2
         guess = values[mid]
@@ -24,7 +27,7 @@ def simple_search(values, item):
     low = 0
     high = len(values) - 1
     
-    # simple linear search algorithm (O(n))
+    # simple linear search algorithm (n or O(n))
     while low <= high:
         head = low
         guess = values[head]
