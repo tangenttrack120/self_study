@@ -1,3 +1,14 @@
+# sorting from largest to smallest (descending order) using selection sort algorithm
+def findLargest(arr):
+    largest = arr[0]
+    largest_index = 0
+    for i in range(1, len(arr)):
+        if arr[i] > largest:
+            largest = arr[i]
+            largest_index = i
+    return largest_index
+
+# sorting from smallest to largest (ascending order) using selection sort algorithm
 def findSmallest(arr):
     smallest = arr[0]
     smallest_index = 0
@@ -7,11 +18,19 @@ def findSmallest(arr):
             smallest_index = i
     return smallest_index
 
-def selectionSort(arr):
+# selection sort algorithm (n^2 or O(n^2)) (generally not efficient for large datasets) (should be written (n * 1/2 * n) but Big O notation ignores constants)
+def selectionSort(arr, order):
     newArr = []
     for i in range(len(arr)):
-        smallest = findSmallest(arr)
-        newArr.append(arr.pop(smallest))
+        if order == "descending":
+            largest = findLargest(arr)
+            newArr.append(arr.pop(largest))
+        else:
+            smallest = findSmallest(arr)
+            newArr.append(arr.pop(smallest))
     return newArr
 
-print(selectionSort([5, 3, 6, 2, 10]))
+unordered_list = [5, 2, 9, 3, 7, 1, 8, 4, 6]
+
+print(selectionSort(unordered_list, "ascending"))
+print(selectionSort(unordered_list, "descending"))

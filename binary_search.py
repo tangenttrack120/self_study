@@ -36,12 +36,13 @@ def simple_search(values, item):
         if guess == item:
                 return head
         else:
-            head += 1
+            low += 1
         print(f"after low: {low}, high: {high}, head: {head}, guess: {guess}")
     return None
     
 
-my_list = [1, 3, 5, 7, 9]
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 
 print(binary_search(my_list, 3))
 print(binary_search(my_list, -1))
+print(simple_search(my_list, 16))
