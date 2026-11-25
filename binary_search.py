@@ -1,7 +1,7 @@
 # common logarithm use base 10
 # in this example we will use binary logarithm (base 2) for analyzing algorithms
 
-def binary_search(values, item):
+def binarySearch(values, item):
     low = 0
     high = len(values) - 1
     
@@ -23,7 +23,7 @@ def binary_search(values, item):
         print(f"after low: {low}, high: {high}, mid: {mid}, guess: {guess}")
     return None
 
-def simple_search(values, item):
+def simpleSearch(values, item):
     low = 0
     high = len(values) - 1
     
@@ -43,6 +43,6 @@ def simple_search(values, item):
 
 my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 
-print(binary_search(my_list, 3))
-print(binary_search(my_list, -1))
-print(simple_search(my_list, 16))
+print(binarySearch(my_list, 3))
+print(binarySearch(my_list, -1))
+print(simpleSearch(my_list, 16))
